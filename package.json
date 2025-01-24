@@ -11,6 +11,13 @@
   "author": {
     "name": "Kazte"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kazte/-kazte-criterium.git"
+  },
+  "homepage": "https://github.com/Kazte/-kazte-criterium#readme",
+  "license": "MIT",
+  "bugs": "https://github.com/Kazte/-kazte-criterium/issues",
   "files": [
     "dist"
   ],
