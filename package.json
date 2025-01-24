@@ -1,38 +1,41 @@
 {
   "name": "@kazte/criterium",
   "module": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "A library that provides an implementation of the Criteria pattern in TypeScript.",
   "scripts": {
-    "build": "bun run build:ts",
-    "build:ts": "tsc",
-    "prepublishOnly": "bun run build"
-  },
-  "author": {
-    "name": "Kazte"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kazte/-kazte-criterium.git"
-  },
-  "homepage": "https://github.com/Kazte/-kazte-criterium#readme",
-  "license": "MIT",
-  "bugs": "https://github.com/Kazte/-kazte-criterium/issues",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "bun-types": "latest",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kazte/criterium.git"
+  },
+  "homepage": "https://github.com/Kazte/criterium",
+  "bugs": "https://github.com/Kazte/criterium/issues",
+  "keywords": [
+    "criteria",
+    "pattern",
+    "utilities",
+    "backend"
+  ],
+  "author": "kazte",
+  "license": "MIT",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ]
 }
