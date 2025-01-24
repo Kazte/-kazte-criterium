@@ -1,8 +1,20 @@
 # Criterium
 
-## Description
-
 This library provides an implementation of the Criteria pattern in TypeScript. It allows for filtering, combining and ordering data collections using reusable and composable criteria.
+
+## Index
+
+- [Criterium](#criterium)
+  - [Index](#index)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [1. Define a data structure](#1-define-a-data-structure)
+    - [2. Define criterias](#2-define-criterias)
+    - [3. Use the criteria](#3-use-the-criteria)
+  - [Combine criteria](#combine-criteria)
+  - [Builder utility](#builder-utility)
+  - [Dynamic criteria](#dynamic-criteria)
 
 ## Features
 
