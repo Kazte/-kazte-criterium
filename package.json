@@ -1,0 +1,28 @@
+{
+  "name": "@kazte/criterium",
+  "module": "src/index.ts",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "bun run build:ts",
+    "build:ts": "tsc",
+    "prepublishOnly": "bun run build"
+  },
+  "author": {
+    "name": "Kazte"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
